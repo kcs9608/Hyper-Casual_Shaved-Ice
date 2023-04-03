@@ -31,4 +31,5 @@ public class PlayerMovement : MonoBehaviour
         }
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -_floorX + (transform.localScale.x / 2), _floorX - (transform.localScale.x / 2)), transform.position.y, transform.position.z);
     }
+    
 }

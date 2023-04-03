@@ -10,7 +10,7 @@ namespace ItemInterface
     }
     public abstract class Items : MonoBehaviour, IItems
     {
-        protected GameObject _player;
+        public GameObject _player;
         protected PlayerStatus _playerStatus;
         protected StageManager _conditions;
         void Awake()

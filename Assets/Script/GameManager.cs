@@ -72,12 +72,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(stageID);
     }
 
-    public Text goldTxt;
-
-    public Text stageTxt;
-    public Text iceTxt;
-    public Text toppingTxt;
-    public Text syrupTxt;
+    public string goldTxt;
+    public string stageTxt;
+    public string iceTxt;
+    public string toppingTxt;
+    public string syrupTxt;
 
     [SerializeField] private float _iceWeight;
     [SerializeField] private Topping.ToppingType _goalToppingType;
@@ -85,11 +84,11 @@ public class GameManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        goldTxt.text = string.Format("{0:n0}", Gold);
+        goldTxt = string.Format("{0:n0}", Gold);
         
-        stageTxt.text = string.Format($"Stage {_stageID}");
-        iceTxt.text = string.Format($"Ice : {_iceWeight}");
-        toppingTxt.text = string.Format($"Topping : {_goalToppingType}");
-        syrupTxt.text = string.Format($"Syrup : {_goalSyrupType}");
+        stageTxt = string.Format($"Stage {_stageID}");
+        iceTxt = string.Format($"Ice : {_iceWeight}");
+        toppingTxt = string.Format($"Topping : {_goalToppingType}");
+        syrupTxt = string.Format($"Syrup : {_goalSyrupType}");
     }
 }
