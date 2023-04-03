@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 class Goal : Items
 {
+    [Header("스테이지 클리어 별 효과음")]
+    [SerializeField] string sound_Star;
+
     private int _starNum;
     public override void EffectToPlayer()
     {
@@ -24,6 +27,7 @@ class Goal : Items
 
         for(int i = 0; i < _starNum; ++i)
         {
+            SoundManager.instance.PlaySoundEffect(sound_Star);
             Debug.Log("★");
         }
 
