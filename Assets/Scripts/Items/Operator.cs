@@ -38,22 +38,22 @@ public class Operator : Items
             case OperatorType.Add:
                 scale = (100 + _weight) / 100f;
                 currentServings += _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Ice);
+                //SoundManager.instance.PlaySoundEffect(sound_Ice);
                 break;
             case OperatorType.Subtract:
                 scale = (100 - _weight) / 100f;
                 currentServings -= _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Fire);
+                //SoundManager.instance.PlaySoundEffect(sound_Fire);
                 break;
             case OperatorType.Multiply:
                 scale = (100 + (_weight * 10)) / 100f;
                 currentServings *= _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Ice);
+                //SoundManager.instance.PlaySoundEffect(sound_Ice);
                 break;
             case OperatorType.Divide:
                 scale = (100 - (_weight * 10)) / 100f;
                 currentServings /= _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Fire);
+                //SoundManager.instance.PlaySoundEffect(sound_Fire);
                 break;
             default:
                 Debug.Log("잘못된 OperatorType 입력이 있습니다.");

@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f436cd5ebe846448da6baa05cc062d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetPosition: {x: 0, y: 10, z: 27}
+  _targetPosition: {x: 0, y: 10, z: 28}
   _lerpSpeed: 0.1
   _targetWaitTime: 1
 --- !u!1102 &6849010472514857944

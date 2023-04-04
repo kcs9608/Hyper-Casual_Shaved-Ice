@@ -24,7 +24,7 @@ public class Topping : Items
         Vector3 defaultSize = transform.localScale * 2;
         GameObject previousTopping = playerTransform.Find(_playerStatus._currentTopping.gameObject.name).gameObject;
 
-        SoundManager.instance.PlaySoundEffect(sound_Topping);
+        //SoundManager.instance.PlaySoundEffect(sound_Topping);
 
         previousTopping.SetActive(false);
 

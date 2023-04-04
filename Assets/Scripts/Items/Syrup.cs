@@ -23,7 +23,7 @@ public class Syrup : Items
     {
         MeshRenderer playerColor = _player.GetComponent<MeshRenderer>();
 
-        SoundManager.instance.PlaySoundEffect(sound_Syrup);
+        //SoundManager.instance.PlaySoundEffect(sound_Syrup);
 
         _playerStatus.ChangeItem(this);
         _conditions.CheckSyrup(this);

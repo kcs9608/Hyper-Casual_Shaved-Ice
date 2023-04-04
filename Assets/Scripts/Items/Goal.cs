@@ -12,6 +12,7 @@ class Goal : Items
     public event Action _isPlayerOnGoal;
     public override void EffectToPlayer()
     {
+        GetComponent<BoxCollider>().enabled = false;
         _starNum = 0;
         foreach (bool satisfiedCondition in _conditions._isSatisfied)
         {
@@ -29,7 +30,7 @@ class Goal : Items
 
         for(int i = 0; i < _starNum; ++i)
         {
-            SoundManager.instance.PlaySoundEffect(sound_Star);
+            //SoundManager.instance.PlaySoundEffect(sound_Star);
             Debug.Log("¡Ú");
         }
 
