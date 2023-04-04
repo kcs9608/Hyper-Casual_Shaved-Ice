@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Music
+  - StageManager
+  - Floor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Items
   - Water
   - UI
   - 
