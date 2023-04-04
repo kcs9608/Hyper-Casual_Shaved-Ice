@@ -12,16 +12,23 @@ public class Topping : Items
     public enum ToppingType
     {
         None,
-        Strawberry,
-        Chocolate,
-        Mango,
+        Yogurt,
+        Watermelon,
+        Orange,
+        Lemon,
+        Kiwi,
+        Grape,
+        Cherry,
+        Banana,
+        Apple,
+        Strawberry
     }
     public ToppingType _toppingType;
-    [SerializeField] float _offset = 1f;
+    [SerializeField] float _offset = 0.25f;
     public override void EffectToPlayer()
     {
         Transform playerTransform = _player.transform;
-        Vector3 defaultSize = transform.localScale * 2;
+        Vector3 defaultSize = transform.localScale / 2;
         GameObject previousTopping = playerTransform.Find(_playerStatus._currentTopping.gameObject.name).gameObject;
 
         //SoundManager.instance.PlaySoundEffect(sound_Topping);
@@ -36,6 +43,7 @@ public class Topping : Items
             transform.SetParent(playerTransform);
             transform.localPosition = new Vector3(0, _offset, 0);
             transform.localScale = defaultSize;
+            transform.gameObject.GetComponent<SphereCollider>().enabled = false;
         }
         else
         {

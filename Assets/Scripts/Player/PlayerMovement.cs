@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerInput _playerInput;
-    private Rigidbody _rigid;
+    [SerializeField] private float _offset = 7f;
     [SerializeField]
     [Range(3f, 15f)]
-    private float _speed;
+    private float _speed = 8f;
     public bool _isTest;
     private GameObject _floor;
     private float _floorX;
+    
     void Awake()
     {
         _playerInput = GetComponent<PlayerInput>();
-        _rigid = GetComponent<Rigidbody>();
         _floor = GameObject.FindWithTag("Floor");
         _floorX = _floor.transform.localScale.x * 5;
     }
@@ -29,7 +30,10 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += new Vector3(_playerInput._horizontal, 0, 1) * (_speed * Time.fixedDeltaTime);
         }
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -_floorX + (transform.localScale.x / 2), _floorX - (transform.localScale.x / 2)), transform.position.y, transform.position.z);
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, -_floorX + (transform.localScale.x / _offset), _floorX - (transform.localScale.x / _offset)), 
+            transform.position.y, 
+            transform.position.z);
     }
     
 }
