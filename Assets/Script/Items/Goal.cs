@@ -1,6 +1,7 @@
 using ItemInterface;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 class Goal : Items
 {
@@ -8,6 +9,7 @@ class Goal : Items
     [SerializeField] string sound_Star;
 
     private int _starNum;
+    public event Action _isPlayerOnGoal;
     public override void EffectToPlayer()
     {
         _starNum = 0;
@@ -33,8 +35,11 @@ class Goal : Items
 
         GameManager.Instance.Reward(100, _starNum);
         Debug.Log($"ÇöÀç °ñµå : {GameManager.Instance.Gold}");
-        SceneManager.LoadScene("SampleScene");
 
-        gameObject.SetActive(false);
+        PlayAnimation();
+    }
+    private void PlayAnimation()
+    {
+        _isPlayerOnGoal?.Invoke();
     }
 }

@@ -17,7 +17,7 @@ public class Syrup : Items
         Lemon,
         Orange
     }
-    public SyrupType _syrupType = (SyrupType)Random.Range(0, 2);
+    public SyrupType _syrupType;
 
     public override void EffectToPlayer()
     {
