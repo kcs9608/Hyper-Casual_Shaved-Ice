@@ -7,8 +7,6 @@ using Unity.VisualScripting.FullSerializer.Internal;
 
 public class Topping : Items
 {
-    [Header("≈‰«Œ »πµÊ »ø∞˙¿Ω")]
-    [SerializeField] string sound_Topping;
     public enum ToppingType
     {
         None,
@@ -18,13 +16,16 @@ public class Topping : Items
     }
     public ToppingType _toppingType;
     [SerializeField] float _offset = 1f;
+
+    [SerializeField] private AudioSource toppingSfx;
+
     public override void EffectToPlayer()
     {
+        toppingSfx.Play();
+
         Transform playerTransform = _player.transform;
         Vector3 defaultSize = transform.localScale * 2;
         GameObject previousTopping = playerTransform.Find(_playerStatus._currentTopping.gameObject.name).gameObject;
-
-        SoundManager.instance.PlaySoundEffect(sound_Topping);
 
         previousTopping.SetActive(false);
 

@@ -7,11 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Operator : Items
 {
-    [Header("얼음 획득 효과음")]
-    [SerializeField] string sound_Ice;
-
-    [Header("불 획득 효과음")]
-    [SerializeField] string sound_Fire;
+    [SerializeField] private AudioSource iceSfx;
+    [SerializeField] private AudioSource fireSfx;
 
     enum OperatorType
     {
@@ -36,24 +33,24 @@ public class Operator : Items
         switch (operatorType)
         {
             case OperatorType.Add:
+                iceSfx.Play();
                 scale = (100 + _weight) / 100f;
                 currentServings += _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Ice);
                 break;
             case OperatorType.Subtract:
+                fireSfx.Play();
                 scale = (100 - _weight) / 100f;
                 currentServings -= _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Fire);
                 break;
             case OperatorType.Multiply:
+                iceSfx.Play();
                 scale = (100 + (_weight * 10)) / 100f;
                 currentServings *= _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Ice);
                 break;
             case OperatorType.Divide:
+                fireSfx.Play();
                 scale = (100 - (_weight * 10)) / 100f;
                 currentServings /= _weight;
-                SoundManager.instance.PlaySoundEffect(sound_Fire);
                 break;
             default:
                 Debug.Log("잘못된 OperatorType 입력이 있습니다.");
@@ -63,7 +60,7 @@ public class Operator : Items
         if (currentServings <= 0)
         {
             Debug.Log("녹음");
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(3);
             return;
         }
 
