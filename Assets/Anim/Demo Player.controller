@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slideDist: 3
-  _slideSpeed: 0.05
+  _slideSpeed: 20
 --- !u!1101 &-6147379774564166804
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetPosition: {x: 0, y: 10, z: 28}
-  _lerpSpeed: 0.01
+  _lerpSpeed: 30
   _targetWaitTime: 2
 --- !u!1102 &6849010472514857944
 AnimatorState:

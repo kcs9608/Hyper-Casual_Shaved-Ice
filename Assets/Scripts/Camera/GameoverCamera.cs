@@ -6,14 +6,18 @@ using UnityEngine;
 public class GameoverCamera : Camera
 {
     private float _zoomOutScale = 1.5f;
-    private float _zoomOutSpeed = 0.01f;
+    private float _lerpSpeed = 30f;
+    private float _moveTime;
     private Vector3 _endPoint;
     private void OnEnable()
     {
         _endPoint = _target.transform.position - (_offset * _zoomOutScale);
+        float distance = Vector3.Distance(transform.position, _endPoint);
+        _moveTime = distance / _lerpSpeed;
     }
     void LateUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, _endPoint, _zoomOutSpeed);
+        float ratio = Mathf.Clamp01(Time.deltaTime / _moveTime);
+        transform.position = Vector3.Lerp(transform.position, _endPoint, ratio);
     }
 }
