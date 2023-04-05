@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-    [SerializeField] private Syrup.SyrupType _goalSyrupType;
-    [SerializeField] private Topping.ToppingType _goalToppingType;
-    [SerializeField] private int _goalMinSize;
-    [SerializeField] private int _goalMaxSize;
+    [SerializeField] public Syrup.SyrupType _goalSyrupType;
+    [SerializeField] public Topping.ToppingType _goalToppingType;
+    [SerializeField] public int _goalMinSize;
+    [SerializeField] public int _goalMaxSize;
 
     [SerializeField] private int _conditionCount = 3;
+
+
     public bool[] _isSatisfied { get; private set; }
 
     private void Awake()

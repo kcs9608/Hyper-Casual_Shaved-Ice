@@ -21,13 +21,14 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
-    private int _gold = 0;
+    public int _gold { get; private set; } = 0;
 
     public int Gold
     { 
         get { return _gold; }
     }
-    private int _stageID = 1;
+
+    public int _stageID { get; private set; } = 1;
 
     private void Awake()
     {
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
     public void LoadScene(int stageID)
     {
         SceneManager.LoadScene(stageID);
+
     }
 
     public string goldTxt;

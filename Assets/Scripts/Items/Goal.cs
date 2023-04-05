@@ -23,7 +23,7 @@ class Goal : Items
 
         if(_starNum == 0)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("gameSample");
             return;
         }
 
