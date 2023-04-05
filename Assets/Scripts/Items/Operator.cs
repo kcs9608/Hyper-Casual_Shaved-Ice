@@ -9,7 +9,8 @@ public class Operator : Items
 {
     [SerializeField] private AudioSource iceSfx;
     [SerializeField] private AudioSource fireSfx;
-
+    [SerializeField] private float _minSize = 1f;
+    [SerializeField] private float _maxSize = 4f;
     enum OperatorType
     {
 
@@ -70,17 +71,17 @@ public class Operator : Items
 
         _playerTransform.localScale *= scale;
 
-        if (_playerTransform.localScale.x > 1.5f)
+        if (_playerTransform.localScale.x > _maxSize)
         {
-            _playerTransform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            _playerTransform.localScale = new Vector3(_maxSize, _maxSize, _maxSize);
         }
-        else if (_playerTransform.localScale.x < 0.2f)
+        else if (_playerTransform.localScale.x < _minSize)
         {
-            _playerTransform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            _playerTransform.localScale = new Vector3(_minSize, _minSize, _minSize);
         }
 
         _playerTransform.position = new Vector3(_playerTransform.position.x,
-        _playerTransform.localScale.y / 2,
+        _playerTransform.localScale.y / 6,
         _playerTransform.position.z);
 
         gameObject.SetActive(false);

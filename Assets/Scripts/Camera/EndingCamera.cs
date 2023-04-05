@@ -6,14 +6,14 @@ using static UnityEngine.GraphicsBuffer;
 public class EndingCamera : Camera
 {
     private Vector3 _targetPoint = new Vector3(0, 12, 0);
-    private float _lerpSpeed = 0.05f;
+    private float _lerpSpeed = 0.01f;
     private float _elapsedTime;
     private float _targetTime;
     private bool _isOnPoint = false;
 
     private void OnEnable()
     {
-        _targetTime = 6.5f;
+        _targetTime = 8f;
     }
     void LateUpdate()
     {

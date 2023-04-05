@@ -8,7 +8,7 @@ using UnityEngine;
 public class JumpToFridge : StateMachineBehaviour
 {
     [SerializeField] private Vector3 _targetPosition = new Vector3(0 , 10, 28);
-    [SerializeField][Range(0, 1)] private float _lerpSpeed = 0.005f;
+    [SerializeField][Range(0, 1)] private float _lerpSpeed = 0.01f;
     [SerializeField] private float _targetWaitTime = 2f;
     private float _elapsedTime;
 

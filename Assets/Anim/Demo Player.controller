@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetPosition: {x: 0, y: 10, z: 28}
-  _lerpSpeed: 0.1
+  _lerpSpeed: 0.01
   _targetWaitTime: 2
 --- !u!1102 &6849010472514857944
 AnimatorState:

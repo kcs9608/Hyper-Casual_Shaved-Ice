@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameoverCamera : Camera
 {
     private float _zoomOutScale = 1.5f;
-    private float _zoomOutSpeed = 0.05f;
+    private float _zoomOutSpeed = 0.01f;
     private Vector3 _endPoint;
     private void OnEnable()
     {
