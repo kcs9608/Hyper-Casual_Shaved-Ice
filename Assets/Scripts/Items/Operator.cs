@@ -7,11 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Operator : Items
 {
-    [Header("¾óÀ½ È¹µæ È¿°úÀ½")]
-    [SerializeField] string sound_Ice;
-
-    [Header("ºÒ È¹µæ È¿°úÀ½")]
-    [SerializeField] string sound_Fire;
+    [SerializeField] private AudioSource iceSfx;
+    [SerializeField] private AudioSource fireSfx;
 
     enum OperatorType
     {
@@ -26,8 +23,6 @@ public class Operator : Items
     OperatorType operatorType;
     [SerializeField]
     private int _weight;
-    [SerializeField] private float _maxSize = 6f;
-    [SerializeField] private float _minSize = 1f;
 
     public override void EffectToPlayer()
     {
@@ -38,24 +33,24 @@ public class Operator : Items
         switch (operatorType)
         {
             case OperatorType.Add:
+                iceSfx.Play();
                 scale = (100 + _weight) / 100f;
                 currentServings += _weight;
-                //SoundManager.instance.PlaySoundEffect(sound_Ice);
                 break;
             case OperatorType.Subtract:
+                fireSfx.Play();
                 scale = (100 - _weight) / 100f;
                 currentServings -= _weight;
-                //SoundManager.instance.PlaySoundEffect(sound_Fire);
                 break;
             case OperatorType.Multiply:
+                iceSfx.Play();
                 scale = (100 + (_weight * 10)) / 100f;
                 currentServings *= _weight;
-                //SoundManager.instance.PlaySoundEffect(sound_Ice);
                 break;
             case OperatorType.Divide:
+                fireSfx.Play();
                 scale = (100 - (_weight * 10)) / 100f;
                 currentServings /= _weight;
-                //SoundManager.instance.PlaySoundEffect(sound_Fire);
                 break;
             default:
                 Debug.Log("Àß¸øµÈ OperatorType ÀÔ·ÂÀÌ ÀÖ½À´Ï´Ù.");
@@ -65,7 +60,7 @@ public class Operator : Items
         if (currentServings <= 0)
         {
             Debug.Log("³ìÀ½");
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene(3);
             return;
         }
 
@@ -75,17 +70,17 @@ public class Operator : Items
 
         _playerTransform.localScale *= scale;
 
-        if (_playerTransform.localScale.x > _maxSize)
+        if (_playerTransform.localScale.x > 1.5f)
         {
-            _playerTransform.localScale = new Vector3(_maxSize, _maxSize, _maxSize);
+            _playerTransform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
-        else if (_playerTransform.localScale.x < _minSize)
+        else if (_playerTransform.localScale.x < 0.2f)
         {
-            _playerTransform.localScale = new Vector3(_minSize, _minSize, _minSize);
+            _playerTransform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         }
 
         _playerTransform.position = new Vector3(_playerTransform.position.x,
-        _playerTransform.localScale.y / 8,
+        _playerTransform.localScale.y / 2,
         _playerTransform.position.z);
 
         gameObject.SetActive(false);

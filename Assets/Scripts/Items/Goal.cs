@@ -5,14 +5,13 @@ using System;
 
 class Goal : Items
 {
-    [Header("스테이지 클리어 별 효과음")]
-    [SerializeField] string sound_Star;
+    [SerializeField] private AudioSource stageClearSfx;
 
     private int _starNum;
     public event Action _isPlayerOnGoal;
+
     public override void EffectToPlayer()
     {
-        GetComponent<BoxCollider>().enabled = false;
         _starNum = 0;
         foreach (bool satisfiedCondition in _conditions._isSatisfied)
         {
@@ -30,7 +29,7 @@ class Goal : Items
 
         for(int i = 0; i < _starNum; ++i)
         {
-            //SoundManager.instance.PlaySoundEffect(sound_Star);
+            stageClearSfx.Play();
             Debug.Log("★");
         }
 

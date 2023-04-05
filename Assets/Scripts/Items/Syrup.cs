@@ -5,11 +5,9 @@ using ItemInterface;
 
 public class Syrup : Items
 {
-    [Header("½Ã·´ È¹µæ È¿°úÀ½")]
-    [SerializeField] string sound_Syrup;
+    [SerializeField] private AudioSource syrupSfx;
 
-    [SerializeField]
-    private Color _color;
+    [SerializeField] private Color _color;
 
     public enum SyrupType
     {
@@ -21,9 +19,9 @@ public class Syrup : Items
 
     public override void EffectToPlayer()
     {
-        MeshRenderer playerColor = _player.GetComponent<MeshRenderer>();
+        syrupSfx.Play();
 
-        //SoundManager.instance.PlaySoundEffect(sound_Syrup);
+        MeshRenderer playerColor = _player.GetComponent<MeshRenderer>();
 
         _playerStatus.ChangeItem(this);
         _conditions.CheckSyrup(this);
