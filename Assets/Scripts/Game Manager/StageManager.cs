@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StageManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class StageManager : MonoBehaviour
     [SerializeField] public int _goalMaxSize;
 
     [SerializeField] private int _conditionCount = 3;
+
+    [SerializeField] GameObject go_UI;
 
 
     public bool[] _isSatisfied { get; private set; }
@@ -57,5 +60,10 @@ public class StageManager : MonoBehaviour
             Debug.Log("사이즈 불만족");
             _isSatisfied[2] = false;
         }
+    }
+
+    public void ShowClearUI()
+    {
+        go_UI.SetActive(true);
     }
 }

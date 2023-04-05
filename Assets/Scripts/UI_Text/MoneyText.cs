@@ -14,6 +14,6 @@ public class MoneyText : MonoBehaviour
 
     private void Start()
     {
-        ScriptTxt.text = $"Stage {GameManager.Instance._gold}";
+        ScriptTxt.text = $"{GameManager.Instance._gold}";
     }
 }
