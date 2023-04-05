@@ -7,7 +7,6 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     [Range(9f, 10f)]
     private float speed;
-
     public float _horizontal { get; private set; }
     public float _vertical { get; private set; }
 

@@ -62,13 +62,6 @@ public class Operator : Items
                 break;
         }
 
-        if (currentServings <= 0)
-        {
-            Debug.Log("³ìÀ½");
-            SceneManager.LoadScene("SampleScene");
-            return;
-        }
-
         _playerStatus.ChangeSize(currentServings);
         _conditions.CheckSize(currentServings);
         Debug.Log($"{currentServings}");

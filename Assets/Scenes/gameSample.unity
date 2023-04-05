@@ -388,9 +388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fridge: {fileID: 617020191}
-  _targetPoint: {x: 0, y: 15, z: 0}
-  _lerpSpeed: 0.1
-  _targetTime: 4
 --- !u!1 &1620822221
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,13 +537,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6622578890575048428, guid: 5d3448c068cea024aa9b434936e8ce28, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6622578890575048432, guid: 5d3448c068cea024aa9b434936e8ce28, type: 3}
       propertyPath: _fridge
       value: 
       objectReference: {fileID: 617020191}
     - target: {fileID: 6622578890575048433, guid: 5d3448c068cea024aa9b434936e8ce28, type: 3}
       propertyPath: _isTest
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622578890575048433, guid: 5d3448c068cea024aa9b434936e8ce28, type: 3}
+      propertyPath: _playerOffset
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6622578890575048437, guid: 5d3448c068cea024aa9b434936e8ce28, type: 3}
       propertyPath: m_Name

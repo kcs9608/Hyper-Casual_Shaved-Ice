@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,8 +9,9 @@ public class JumpToFridge : StateMachineBehaviour
 {
     [SerializeField] private Vector3 _targetPosition = new Vector3(0 , 10, 28);
     [SerializeField][Range(0, 1)] private float _lerpSpeed = 0.005f;
-    [SerializeField] private float _targetWaitTime;
+    [SerializeField] private float _targetWaitTime = 2f;
     private float _elapsedTime;
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _elapsedTime = 0;

@@ -8,7 +8,7 @@ class Goal : Items
     [Header("스테이지 클리어 별 효과음")]
     [SerializeField] string sound_Star;
 
-    private int _starNum;
+    public int _starNum { get; private set; }
     public event Action _isPlayerOnGoal;
     public override void EffectToPlayer()
     {
@@ -24,7 +24,7 @@ class Goal : Items
 
         if(_starNum == 0)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("gameSample");
             return;
         }
 

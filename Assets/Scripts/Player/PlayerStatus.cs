@@ -10,9 +10,11 @@ using UnityEngine.UI;
 public class PlayerStatus : MonoBehaviour
 {
     public event Action StatusChanged;
+    public event Action GameOver;
     public Syrup _currentSyrup { get; private set; }
     public Topping _currentTopping { get; private set; }
     public int _currentServings { get; private set; }
+
     private void OnEnable()
     {
         _currentServings = 1;
@@ -32,8 +34,14 @@ public class PlayerStatus : MonoBehaviour
     public void ChangeItem(Topping changedItem) => _currentTopping = changedItem;
     public void ChangeSize(int serving)
     {
+        if (serving <= 0)
+        {
+            Debug.Log("³ìÀ½");
+            GameIsOver();
+        }
         _currentServings = serving;
         UpdateSize();
     }
     public void UpdateSize() => StatusChanged?.Invoke();
+    public void GameIsOver() => GameOver?.Invoke();
 }
