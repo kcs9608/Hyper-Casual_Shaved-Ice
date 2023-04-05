@@ -9,7 +9,6 @@ class Goal : Items
     [SerializeField] private AudioSource stageClearSfx;
 
     [SerializeField] private GameObject stageClearPanel;
-    [SerializeField] private Image starImage;
 
     public void LoadStageClearUI()
     {
