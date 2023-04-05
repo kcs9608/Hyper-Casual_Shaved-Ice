@@ -10,6 +10,11 @@ class Goal : Items
 
     public int _starNum { get; private set; }
     public event Action _isPlayerOnGoal;
+    public bool _isAnimationEnded;
+    private void OnEnable()
+    {
+        _isAnimationEnded = false;
+    }
     public override void EffectToPlayer()
     {
         GetComponent<BoxCollider>().enabled = false;

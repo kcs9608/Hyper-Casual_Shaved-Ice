@@ -13,14 +13,14 @@ public class EndingCamera : Camera
 
     private void OnEnable()
     {
-        _targetTime = 3f;
+        _targetTime = 6.5f;
     }
     void LateUpdate()
     {
         if (!_isOnPoint)
         {
             transform.position = Vector3.Lerp(transform.position, _targetPoint, _lerpSpeed);
-            if(transform.position == _targetPoint)
+            if(transform.position.y >= _targetPoint.y - 0.1f)
             {
                 _isOnPoint = true;
             }
