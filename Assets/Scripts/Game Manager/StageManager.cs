@@ -13,9 +13,6 @@ public class StageManager : MonoBehaviour
 
     [SerializeField] private int _conditionCount = 3;
 
-    [SerializeField] GameObject go_UI;
-
-
     public bool[] _isSatisfied { get; private set; }
 
     private void Awake()
@@ -60,10 +57,5 @@ public class StageManager : MonoBehaviour
             Debug.Log("사이즈 불만족");
             _isSatisfied[2] = false;
         }
-    }
-
-    public void ShowClearUI()
-    {
-        go_UI.SetActive(true);
     }
 }

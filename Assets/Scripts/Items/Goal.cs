@@ -2,13 +2,30 @@ using ItemInterface;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
 
 class Goal : Items
 {
     [SerializeField] private AudioSource stageClearSfx;
 
+    [SerializeField] private GameObject stageClearPanel;
+    [SerializeField] private Image starImage;
+
+    public void LoadStageClearUI()
+    {
+        stageClearPanel.SetActive(true);
+    }
+
     private int _starNum;
     public event Action _isPlayerOnGoal;
+
+    public Sprite[] clearStar; // 바꿀 이미지 색깔 있는 별
+    Image[] currentStar; // 현재 이미지 색깔 없는 별
+
+    private void Start()
+    {
+        currentStar = GetComponent<Image[]>();
+    }
 
     public override void EffectToPlayer()
     {
@@ -30,6 +47,7 @@ class Goal : Items
         for(int i = 0; i < _starNum; ++i)
         {
             stageClearSfx.Play();
+            ChangeImage(_starNum);
             Debug.Log("★");
         }
 
@@ -38,6 +56,12 @@ class Goal : Items
 
         PlayAnimation();
     }
+
+    public void ChangeImage(int index)
+    {
+        currentStar[index].sprite = clearStar[index];
+    }
+
     private void PlayAnimation()
     {
         _isPlayerOnGoal?.Invoke();
