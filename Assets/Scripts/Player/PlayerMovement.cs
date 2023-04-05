@@ -6,7 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerInput _playerInput;
-    [SerializeField] private float _offset = 7f;
+    [SerializeField] private float _playerOffset = 6f;
+    [SerializeField] private float _floorOffset = 5f;
     [SerializeField]
     [Range(3f, 15f)]
     private float _speed = 8f;
@@ -18,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _playerInput = GetComponent<PlayerInput>();
         _floor = GameObject.FindWithTag("Floor");
-        _floorX = _floor.transform.localScale.x * 5;
+        _floorX = _floor.transform.localScale.x * _floorOffset;
     }
     void FixedUpdate()
     {
@@ -31,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position += new Vector3(_playerInput._horizontal, 0, 1) * (_speed * Time.fixedDeltaTime);
         }
         transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -_floorX + (transform.localScale.x / _offset), _floorX - (transform.localScale.x / _offset)), 
+            Mathf.Clamp(transform.position.x, -_floorX + (transform.localScale.x / _playerOffset), _floorX - (transform.localScale.x / _playerOffset)), 
             transform.position.y, 
             transform.position.z);
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CheckPlayerInFridge : StateMachineBehaviour
 {
-    [SerializeField] private float _targetWaitTime;
+    [SerializeField] private float _targetWaitTime = 2.5f;
     private float _elapsedTime;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
