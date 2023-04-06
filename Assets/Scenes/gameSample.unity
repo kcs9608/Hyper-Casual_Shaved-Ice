@@ -953,8 +953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &201923455
 TextMesh:
   serializedVersion: 3
@@ -1691,8 +1689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &523055944
 TextMesh:
   serializedVersion: 3
@@ -1803,8 +1799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &534086637
 TextMesh:
   serializedVersion: 3
@@ -2198,8 +2192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &643665011
 TextMesh:
   serializedVersion: 3
@@ -2505,8 +2497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &746769106
 TextMesh:
   serializedVersion: 3
@@ -2893,8 +2883,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &832851346
 TextMesh:
   serializedVersion: 3
@@ -3546,8 +3534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &973599350
 TextMesh:
   serializedVersion: 3
@@ -3889,8 +3875,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &1039211548
 TextMesh:
   serializedVersion: 3
@@ -4544,8 +4528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &1394224015
 TextMesh:
   serializedVersion: 3
@@ -4992,8 +4974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &1453907248
 TextMesh:
   serializedVersion: 3
@@ -5764,8 +5744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &1692982444
 TextMesh:
   serializedVersion: 3
@@ -6617,8 +6595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _operator: {fileID: 0}
-  _weight: 30
 --- !u!102 &1996277176
 TextMesh:
   serializedVersion: 3
