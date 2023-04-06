@@ -908,6 +908,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8015196497569497212, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
   m_PrefabInstance: {fileID: 8015196498932576001}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &256526688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4049009063835192260, guid: 995f5938f78375041a897987c3169763, type: 3}
+  m_PrefabInstance: {fileID: 4049009063367140606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &379500065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8824009200470292170, guid: 510ec056f8be48640973df33e1378053, type: 3}
@@ -1797,6 +1802,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inGameCanvas: {fileID: 1615112283}
+--- !u!1 &1671599808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4049009062023132668, guid: 995f5938f78375041a897987c3169763, type: 3}
+  m_PrefabInstance: {fileID: 4049009063367140606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1674137993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6622578890575048437, guid: 5d3448c068cea024aa9b434936e8ce28, type: 3}
@@ -1999,6 +2009,11 @@ PrefabInstance:
       objectReference: {fileID: 597296319}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3448c068cea024aa9b434936e8ce28, type: 3}
+--- !u!1 &1792282346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4049009062455067760, guid: 995f5938f78375041a897987c3169763, type: 3}
+  m_PrefabInstance: {fileID: 4049009063367140606}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1838164956 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2568699037658046885, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
@@ -2293,26 +2308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7c8f89f447179429af4e0faf762d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2136300006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615112283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8364950d6071d34985bbc065545b2f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 1674137993}
-  stageClearSfx: {fileID: 8089620}
-  stageClearUI: {fileID: 0}
-  clearStar: {fileID: 21300000, guid: eaa141f45a62fa848aa62abe21ff5cef, type: 3}
-  stars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &2833151874256189571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2969,6 +2964,14 @@ PrefabInstance:
       value: 9.24
       objectReference: {fileID: 0}
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1674137993}
+    - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
+      propertyPath: clearStar
+      value: 
+      objectReference: {fileID: 21300000, guid: eaa141f45a62fa848aa62abe21ff5cef, type: 3}
+    - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: stageClearUI
       value: 
       objectReference: {fileID: 2041015958}
@@ -2987,15 +2990,15 @@ PrefabInstance:
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: stars.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 256526688}
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: stars.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1671599808}
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: stars.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1792282346}
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: clearStar.Array.size
       value: 1

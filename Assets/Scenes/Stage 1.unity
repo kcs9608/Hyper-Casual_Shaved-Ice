@@ -2990,11 +2990,11 @@ PrefabInstance:
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: stars.Array.data[0]
       value: 
-      objectReference: {fileID: 1671599808}
+      objectReference: {fileID: 256526688}
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: stars.Array.data[1]
       value: 
-      objectReference: {fileID: 256526688}
+      objectReference: {fileID: 1671599808}
     - target: {fileID: 8824009201226167151, guid: 510ec056f8be48640973df33e1378053, type: 3}
       propertyPath: stars.Array.data[2]
       value: 

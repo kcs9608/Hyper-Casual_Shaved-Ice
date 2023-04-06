@@ -5,7 +5,7 @@ using System;
 using UnityEngine.UI;
 class Goal : Items
 {
-    [SerializeField] private AudioSource stageClearSfx;
+    public AudioSource stageClearSfx;
     [SerializeField] private GameObject stageClearUI;
     public void LoadStageClearUI()
     {
@@ -45,7 +45,6 @@ class Goal : Items
         }
         for (int i = 0; i < _starNum; ++i)
         {
-            stageClearSfx.Play();
             ChangeImage(i);
             Debug.Log("¡Ú");
         }
