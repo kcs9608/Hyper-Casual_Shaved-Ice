@@ -267,6 +267,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: ab872e72dfb3de44280e219c4786b7a8, type: 3}
+    - target: {fileID: 2568699036852470486, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.92
+      objectReference: {fileID: 0}
     - target: {fileID: 2568699036868868600, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_Name
       value: Money Text
@@ -949,6 +953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &201923455
 TextMesh:
@@ -1031,7 +1036,7 @@ GameObject:
   - component: {fileID: 223107909}
   - component: {fileID: 223107908}
   - component: {fileID: 223107907}
-  - component: {fileID: 223107906}
+  - component: {fileID: 223107910}
   m_Layer: 0
   m_Name: Syrup_Orange_Quad
   m_TagString: Untagged
@@ -1055,18 +1060,6 @@ Transform:
   m_Father: {fileID: 543381488}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &223107906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223107904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e84e2b1c658ef374aa6cd5c2fe09c0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &223107907
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1131,6 +1124,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223107904}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &223107910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223107904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84e2b1c658ef374aa6cd5c2fe09c0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &235406561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,6 +1691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &523055944
 TextMesh:
@@ -1797,6 +1803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &534086637
 TextMesh:
@@ -1873,7 +1880,6 @@ GameObject:
   - component: {fileID: 539664888}
   - component: {fileID: 539664887}
   - component: {fileID: 539664886}
-  - component: {fileID: 539664889}
   m_Layer: 0
   m_Name: Add_Text
   m_TagString: Untagged
@@ -1889,7 +1895,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539664885}
-  m_Text: + 10
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1960,19 +1966,6 @@ Transform:
   m_Father: {fileID: 1446068283}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &539664889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539664885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weight: 30
 --- !u!4 &543381488 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7905115631071094597, guid: 79002f879d0a8c946a82b134b746d781, type: 3}
@@ -2205,6 +2198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &643665011
 TextMesh:
@@ -2511,6 +2505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &746769106
 TextMesh:
@@ -2898,6 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &832851346
 TextMesh:
@@ -3550,6 +3546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &973599350
 TextMesh:
@@ -3656,7 +3653,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006404499}
-  m_Text: '- 10'
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -3892,6 +3889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &1039211548
 TextMesh:
@@ -4320,7 +4318,7 @@ GameObject:
   - component: {fileID: 1363936082}
   - component: {fileID: 1363936081}
   - component: {fileID: 1363936080}
-  - component: {fileID: 1363936079}
+  - component: {fileID: 1363936083}
   m_Layer: 0
   m_Name: Syrup_Lemon_Quad
   m_TagString: Untagged
@@ -4344,18 +4342,6 @@ Transform:
   m_Father: {fileID: 1067695532}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1363936079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363936077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e84e2b1c658ef374aa6cd5c2fe09c0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!64 &1363936080
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4420,6 +4406,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363936077}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1363936083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363936077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84e2b1c658ef374aa6cd5c2fe09c0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1388077729
 GameObject:
   m_ObjectHideFlags: 0
@@ -4546,6 +4544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &1394224015
 TextMesh:
@@ -4993,6 +4992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &1453907248
 TextMesh:
@@ -5104,7 +5104,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542667380}
-  m_Text: x 10
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -5764,6 +5764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &1692982444
 TextMesh:
@@ -6616,6 +6617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43c095fca1b9244aed326e95af6d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _operator: {fileID: 0}
   _weight: 30
 --- !u!102 &1996277176
 TextMesh:
@@ -6981,7 +6983,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064512695}
-  m_Text: '% 10'
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -7219,6 +7221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toppings (New)
       objectReference: {fileID: 0}
+    - target: {fileID: 2833151872785216440, guid: 6c3419c80d6f66143bab5ef82c51169d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2833151872785216447, guid: 6c3419c80d6f66143bab5ef82c51169d, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -7352,6 +7358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Syrup (New)
       objectReference: {fileID: 0}
+    - target: {fileID: 3510114341764584984, guid: 79002f879d0a8c946a82b134b746d781, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4236465225025399152, guid: 79002f879d0a8c946a82b134b746d781, type: 3}
       propertyPath: syrupSfx
       value: 
@@ -7417,18 +7427,38 @@ PrefabInstance:
       propertyPath: fireSfx
       value: 
       objectReference: {fileID: 1085990359}
+    - target: {fileID: 8015196497626081562, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
+      propertyPath: _textMesh
+      value: 
+      objectReference: {fileID: 2064512697}
     - target: {fileID: 8015196497963971606, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
       propertyPath: iceSfx
       value: 
       objectReference: {fileID: 2075069400}
+    - target: {fileID: 8015196497963971606, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
+      propertyPath: addText
+      value: 
+      objectReference: {fileID: 539664886}
+    - target: {fileID: 8015196497963971606, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
+      propertyPath: _textMesh
+      value: 
+      objectReference: {fileID: 539664886}
     - target: {fileID: 8015196498753473055, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
       propertyPath: iceSfx
       value: 
       objectReference: {fileID: 2075069400}
+    - target: {fileID: 8015196498753473055, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
+      propertyPath: _textMesh
+      value: 
+      objectReference: {fileID: 1542667382}
     - target: {fileID: 8015196499421451652, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
       propertyPath: fireSfx
       value: 
       objectReference: {fileID: 1085990359}
+    - target: {fileID: 8015196499421451652, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
+      propertyPath: _textMesh
+      value: 
+      objectReference: {fileID: 1006404501}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e2d2c337b50c445939239de70051a4, type: 3}
 --- !u!1001 &8105225016128435469
