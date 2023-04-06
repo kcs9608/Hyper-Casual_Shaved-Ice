@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using static UnityEngine.GraphicsBuffer;
 
 public class PlayerMelt : StateMachineBehaviour
@@ -27,5 +28,9 @@ public class PlayerMelt : StateMachineBehaviour
         }
         float ratio = Mathf.Clamp01(Time.deltaTime / _moveTime);
         animator.transform.position = Vector3.Lerp(animator.transform.position, _targetPoint, ratio);
+        if(Vector3.Distance(animator.transform.position, _targetPoint) <= 0.2f)
+        {
+            animator.GetComponent<PlayerGameOver>().LoadGameOverUI();
+        }
     }
 }

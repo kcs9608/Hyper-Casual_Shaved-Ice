@@ -13,7 +13,6 @@ public class PlayerGetItem : MonoBehaviour
         {
             Items item = other.GetComponent<Items>();
             item.EffectToPlayer();
-            goal.LoadStageClearUI();
         }
     }
 }

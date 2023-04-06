@@ -20,6 +20,9 @@ public class CameraMovement : Camera
         {
             _goal._isPlayerOnGoal -= () => _isCleared = true;
             _goal._isPlayerOnGoal += () => _isCleared = true;
+        }
+        if(_status != null)
+        {
             _status.GameOver -= ChangeToGameOverCamera;
             _status.GameOver += ChangeToGameOverCamera;
         }
@@ -43,8 +46,12 @@ public class CameraMovement : Camera
         if (_goal != null)
         {
             _goal._isPlayerOnGoal -= () => _isCleared = true;
+        }
+        if (_status != null)
+        {
             _status.GameOver -= ChangeToGameOverCamera;
         }
+
     }
     private void ChangeToGameOverCamera()
     {

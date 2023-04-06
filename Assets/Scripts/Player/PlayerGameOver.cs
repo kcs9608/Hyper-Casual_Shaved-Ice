@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerGameOver : MonoBehaviour
 {
     private PlayerStatus _status;
-
+    [SerializeField] private GameObject gameOverUI;
+    public void LoadGameOverUI()
+    {
+        gameOverUI.SetActive(true);
+    }
     void Awake()
     {
         _status = gameObject.GetComponent<PlayerStatus>();

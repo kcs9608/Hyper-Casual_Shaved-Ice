@@ -6,6 +6,7 @@ using System;
 public class PlayerOnGoal : MonoBehaviour
 {
     [SerializeField] private GameObject _fridge;
+
     private Goal _goal;
     void Awake()
     {

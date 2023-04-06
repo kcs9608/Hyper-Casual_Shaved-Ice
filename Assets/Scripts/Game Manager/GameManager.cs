@@ -72,6 +72,5 @@ public class GameManager : MonoBehaviour
     public void LoadScene(int stageID)
     {
         SceneManager.LoadScene(stageID);
-
     }
 }

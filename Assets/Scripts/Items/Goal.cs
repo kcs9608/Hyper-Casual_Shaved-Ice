@@ -7,14 +7,9 @@ class Goal : Items
 {
     [SerializeField] private AudioSource stageClearSfx;
     [SerializeField] private GameObject stageClearUI;
-    [SerializeField] private GameObject gameOverUI;
     public void LoadStageClearUI()
     {
         stageClearUI.SetActive(true);
-    }
-    public void LoadGameOverUI()
-    {
-        gameOverUI.SetActive(true);
     }
     public int _starNum { get; private set; }
     public event Action _isPlayerOnGoal;
@@ -28,7 +23,7 @@ class Goal : Items
 
         for(int i = 0; i < stars.Length; ++i)
         {
-            currentStar[i] = stars[i].GetComponent<Image>();
+            //currentStar[i] = stars[i].GetComponent<Image>();
         }
     }
     public override void EffectToPlayer()
@@ -49,7 +44,7 @@ class Goal : Items
         for (int i = 0; i < _starNum; ++i)
         {
             stageClearSfx.Play();
-            ChangeImage(i);
+            //ChangeImage(i);
             Debug.Log("¡Ú");
         }
         GameManager.Instance.Reward(100, _starNum);

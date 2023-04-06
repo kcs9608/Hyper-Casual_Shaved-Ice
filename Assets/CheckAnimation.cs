@@ -5,12 +5,18 @@ using UnityEngine;
 
 public class CheckAnimation : StateMachineBehaviour
 {
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
+    [SerializeField] private float _waitTime;
+    private float _elapsedTime;
 
-    }
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        if(_elapsedTime < _waitTime)
+        {
+            _elapsedTime += Time.deltaTime;
+        }
+        else
+        {
+            animator.GetComponent<Goal>().LoadStageClearUI();
+        }
     }
 }
