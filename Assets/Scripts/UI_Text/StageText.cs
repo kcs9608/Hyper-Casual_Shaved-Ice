@@ -14,6 +14,6 @@ public class StageText : MonoBehaviour
 
     private void Start()
     {
-        ScriptTxt.text = $"Stage {GameManager.Instance._stageID}"; 
+        ScriptTxt.text = $"Stage {GameManager.Instance._stageID + 1}"; 
     }
 }

@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c741cc8f8e58c424683a299715edd2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetWaitTime: 2.5
+  _targetWaitTime: 3
 --- !u!1102 &-3727994923859354576
 AnimatorState:
   serializedVersion: 6
@@ -117,7 +117,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: F_Open 0
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955dc530e946f9a4d81504c63b50bb33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitTime: 3
+  _waitTime: 4
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0

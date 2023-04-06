@@ -5,7 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class EndingCamera : Camera
 {
-    private Vector3 _targetPoint = new Vector3(0, 12, 0);
+    private Vector3 _targetPoint = new Vector3(0, 12, 50);
     private float _lerpSpeed = 30f;
     private float _moveTime;
     private float _elapsedTime;
@@ -15,7 +15,7 @@ public class EndingCamera : Camera
     private void OnEnable()
     {
         float distance = Vector3.Distance(transform.position, _targetPoint);
-        _targetTime = 6f;
+        _targetTime = 6.5f;
         _moveTime = distance / _lerpSpeed;
     }
     void LateUpdate()

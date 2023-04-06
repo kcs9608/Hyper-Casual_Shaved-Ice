@@ -6,36 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    public void ToMain()
+    public void TouchHome()
     {
-        SceneManager.LoadScene(0);
+        GameManager.Instance.EnterNextStage();
     }
-
-    public void ToShop()
+    public void TouchReturn()
     {
-        SceneManager.LoadScene(1);
-    }
-
-    public void MainToSetting()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    public void ToGame()
-    {
-        SceneManager.LoadScene(3);
-    }
-
-    //public void ToNextStage()
-    //{
-    //    SceneManager.LoadScene(4);
-    //}
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(0);
-        }
+        SceneManager.LoadScene(GameManager.Instance._stageID % 5);
     }
 }

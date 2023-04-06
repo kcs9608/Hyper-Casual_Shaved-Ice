@@ -38,7 +38,9 @@ class Goal : Items
         }
         if (_starNum == 0)
         {
-            SceneManager.LoadScene("gameSample");
+            _player.GetComponent<PlayerGameOver>().LoadGameOverUI();
+            _player.GetComponent<PlayerInput>().enabled = false;
+            _player.GetComponent<PlayerMovement>().enabled = false;
             return;
         }
         for (int i = 0; i < _starNum; ++i)

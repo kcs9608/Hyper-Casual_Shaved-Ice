@@ -6,6 +6,7 @@ using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
         get { return _gold; }
     }
 
-    public int _stageID { get; private set; } = 1;
+    public int _stageID { get; private set; } = 0;
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
-        }
+        } 
         else
         {
             Destroy(gameObject);
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
     public void EnterNextStage()
     {
         ++_stageID;
+        SceneManager.LoadScene(_stageID % 5);
     }
     public void LoadScene(int stageID)
     {
