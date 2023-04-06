@@ -11,9 +11,8 @@ public class Operator : Items
     [SerializeField] private AudioSource fireSfx;
     [SerializeField] private float _minSize = 1f;
     [SerializeField] private float _maxSize = 4f;
-    enum OperatorType
+    public enum OperatorType
     {
-
         [InspectorName("Add")] Add,
         [InspectorName("Subtract")] Subtract,
         [InspectorName("Multiply")] Multiply,
@@ -22,6 +21,10 @@ public class Operator : Items
 
     [SerializeField]
     OperatorType operatorType;
+    public OperatorType GetOperatorType()
+    {
+        return operatorType;
+    }
     [SerializeField]
     private int _weight;
 

@@ -6,14 +6,12 @@ using UnityEngine;
 
 public class PlayerGetItem : MonoBehaviour
 {
-    [SerializeField] Goal goal;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == LayerMask.NameToLayer("Items"))
         {
             Items item = other.GetComponent<Items>();
             item.EffectToPlayer();
-            goal.LoadStageClearUI();
         }
     }
 }
