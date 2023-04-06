@@ -6,21 +6,29 @@ using UnityEngine.UI;
 class Goal : Items
 {
     [SerializeField] private AudioSource stageClearSfx;
-    [SerializeField] private GameObject stageClearPanel;
+    [SerializeField] private GameObject stageClearUI;
+    [SerializeField] private GameObject gameOverUI;
     public void LoadStageClearUI()
     {
-        stageClearPanel.SetActive(true);
+        stageClearUI.SetActive(true);
+    }
+    public void LoadGameOverUI()
+    {
+        gameOverUI.SetActive(true);
     }
     public int _starNum { get; private set; }
     public event Action _isPlayerOnGoal;
-    [SerializeField] private Sprite[] clearStar; // 바꿀 이미지 색깔 있는 별
+    [SerializeField] private Sprite clearStar; // 바꿀 이미지 색깔 있는 별
     [SerializeField] private GameObject[] stars;
     private Image[] currentStar; // 현재 이미지 색깔 없는 별
+
     private void Start()
     {
-        for(int i = 0; i <stars.Length; ++i)
+        currentStar = new Image[stars.Length];
+
+        for(int i = 0; i < stars.Length; ++i)
         {
-            //currentStar[i] = stars[i].GetComponent<Image>();
+            currentStar[i] = stars[i].GetComponent<Image>();
         }
     }
     public override void EffectToPlayer()
@@ -41,7 +49,7 @@ class Goal : Items
         for (int i = 0; i < _starNum; ++i)
         {
             stageClearSfx.Play();
-            //ChangeImage(i);
+            ChangeImage(i);
             Debug.Log("★");
         }
         GameManager.Instance.Reward(100, _starNum);
@@ -50,7 +58,7 @@ class Goal : Items
     }
     public void ChangeImage(int index)
     {
-        //currentStar[index].sprite = clearStar[index];
+        currentStar[index].sprite = clearStar;
     }
     private void PlayAnimation()
     {
