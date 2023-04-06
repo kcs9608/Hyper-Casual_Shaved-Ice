@@ -23,7 +23,7 @@ class Goal : Items
 
         for(int i = 0; i < stars.Length; ++i)
         {
-            //currentStar[i] = stars[i].GetComponent<Image>();
+            currentStar[i] = stars[i].GetComponent<Image>();
         }
     }
     public override void EffectToPlayer()
@@ -46,7 +46,7 @@ class Goal : Items
         for (int i = 0; i < _starNum; ++i)
         {
             stageClearSfx.Play();
-            //ChangeImage(i);
+            ChangeImage(i);
             Debug.Log("¡Ú");
         }
         GameManager.Instance.Reward(100, _starNum);
