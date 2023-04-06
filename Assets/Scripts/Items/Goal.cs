@@ -51,6 +51,7 @@ class Goal : Items
         }
         GameManager.Instance.Reward(100, _starNum);
         Debug.Log($"ÇöÀç °ñµå : {GameManager.Instance.Gold}");
+        Debug.Log($"{gameObject.name}");
         PlayAnimation();
     }
     public void ChangeImage(int index)
