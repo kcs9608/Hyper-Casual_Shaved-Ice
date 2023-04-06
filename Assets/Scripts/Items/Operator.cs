@@ -61,8 +61,7 @@ public class Operator : Items
         if (currentServings <= 0)
         {
             Debug.Log("³ìÀ½");
-            SceneManager.LoadScene(3);
-            return;
+            //SceneManager.LoadScene(3);
         }
 
         _playerStatus.ChangeSize(currentServings);

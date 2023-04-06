@@ -6,20 +6,24 @@ using static UnityEngine.GraphicsBuffer;
 public class EndingCamera : Camera
 {
     private Vector3 _targetPoint = new Vector3(0, 12, 0);
-    private float _lerpSpeed = 0.01f;
+    private float _lerpSpeed = 30f;
+    private float _moveTime;
     private float _elapsedTime;
     private float _targetTime;
     private bool _isOnPoint = false;
 
     private void OnEnable()
     {
-        _targetTime = 8f;
+        float distance = Vector3.Distance(transform.position, _targetPoint);
+        _targetTime = 6f;
+        _moveTime = distance / _lerpSpeed;
     }
     void LateUpdate()
     {
         if (!_isOnPoint)
         {
-            transform.position = Vector3.Lerp(transform.position, _targetPoint, _lerpSpeed);
+            float ratio = Mathf.Clamp01(Time.deltaTime / _moveTime);
+            transform.position = Vector3.Lerp(transform.position, _targetPoint, ratio);
             if(transform.position.y >= _targetPoint.y - 0.1f)
             {
                 _isOnPoint = true;
@@ -33,7 +37,8 @@ public class EndingCamera : Camera
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, _target.transform.position - _offset, _lerpSpeed);
+            float ratio = Mathf.Clamp01(Time.deltaTime / _moveTime);
+            transform.position = Vector3.Lerp(transform.position, _target.transform.position - _offset, ratio);
         }
     }
 }
