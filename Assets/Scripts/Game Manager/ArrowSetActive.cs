@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ArrowSetActive : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private float _elapsedTime;
+    private float _targetTime = 1.5f;
+    private void Update()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if(_elapsedTime < _targetTime)
+        {
+            _elapsedTime += Time.deltaTime;
+        }
+        else
         {
             gameObject.SetActive(false);
+            this.enabled = false;
         }
     }
 }

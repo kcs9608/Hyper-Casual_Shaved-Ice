@@ -12,8 +12,12 @@ public class Syrup : Items
     public enum SyrupType
     {
         None,
-        Lemon,
-        Orange
+        Chcolate,
+        Strawberry,
+        Milk,
+        Melon,
+        Soda,
+        Mango
     }
     public SyrupType _syrupType;
 

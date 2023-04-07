@@ -126,8 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2568699036852470486}
-  - component: {fileID: 2568699036852470487}
-  - component: {fileID: 2568699036852470505}
+  - component: {fileID: 4754973347246891981}
   m_Layer: 0
   m_Name: Arrow SetActive False
   m_TagString: Untagged
@@ -152,20 +151,7 @@ Transform:
   m_Father: {fileID: 2568699037194404015}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2568699036852470487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568699036852470484}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 5, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2568699036852470505
+--- !u!114 &4754973347246891981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2568699036852470484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2659a3db7ff729a4e9780221218cb6b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cffc33e942d8204ea5a30b503c78f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2568699036868868600
@@ -531,7 +517,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2568699037194404000}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GamePause, Assembly-CSharp
         m_MethodName: OnClickReturn
         m_Mode: 1
@@ -749,9 +735,6 @@ GameObject:
   - component: {fileID: 2568699037194404012}
   - component: {fileID: 2568699037194404013}
   - component: {fileID: 2568699037194404010}
-  - component: {fileID: 2568699037194404014}
-  - component: {fileID: 2568699037194404001}
-  - component: {fileID: 2568699037194404000}
   m_Layer: 5
   m_Name: InGameCanvas
   m_TagString: Untagged
@@ -848,43 +831,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2568699037194404014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568699037194404011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0176521f80d993f4295c4f99b8e9000b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2568699037194404001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568699037194404011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965b5c806b7528e4fb8e97fcf654f6ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2568699037194404000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568699037194404011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e4025b08d2ca554e81f8b8be522d21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingUi: {fileID: 2568699037257833037}
 --- !u!1 &2568699037214933613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,7 +2186,6 @@ GameObject:
   - component: {fileID: 2568699038276604312}
   - component: {fileID: 2568699038276604313}
   - component: {fileID: 2568699038276604294}
-  - component: {fileID: 2568699038276604315}
   m_Layer: 5
   m_Name: SettingButton
   m_TagString: Untagged
@@ -2350,7 +2295,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2568699037194404000}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GamePause, Assembly-CSharp
         m_MethodName: OnClickSetting
         m_Mode: 1
@@ -2362,19 +2307,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2568699038276604315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568699038276604292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e4025b08d2ca554e81f8b8be522d21d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingUi: {fileID: 0}
 --- !u!1 &2568699038540172346
 GameObject:
   m_ObjectHideFlags: 0

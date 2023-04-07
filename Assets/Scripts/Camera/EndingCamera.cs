@@ -5,7 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class EndingCamera : Camera
 {
-    private Vector3 _targetPoint = new Vector3(0, 12, 50);
+    private Vector3 _targetPoint = new Vector3(0, 12, 170);
     private float _lerpSpeed = 30f;
     private float _moveTime;
     private float _elapsedTime;

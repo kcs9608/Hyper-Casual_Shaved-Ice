@@ -32,6 +32,7 @@ public class Topping : Items
         Vector3 defaultSize = transform.localScale / 2;
         GameObject previousTopping = playerTransform.Find(_playerStatus._currentTopping.gameObject.name).gameObject;
 
+        transform.GetChild(0).gameObject.SetActive(false);
         previousTopping.SetActive(false);
 
         _playerStatus.ChangeItem(this);
