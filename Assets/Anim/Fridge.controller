@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shavedIce:
-  - {fileID: 6988940523036507442, guid: 6b8e9902434630a4ea9fb88377a6ab8e, type: 3}
-  - {fileID: 6039484789625365508, guid: 76e0bb08744812d48bd824e0ab59b7e0, type: 3}
-  - {fileID: 3892597994085725061, guid: a02406d1f5205d8419c61a8bb6d2f3c9, type: 3}
+  - {fileID: 160442616457596252, guid: 5b9cc8dd59d375b4e9b862db49ef5cb6, type: 3}
+  - {fileID: 8825558307303868069, guid: 94c05c463e6a9f14e918f3c9f41b767c, type: 3}
+  - {fileID: 1169280674739159810, guid: 02a13ead1ed054f4fb2aab4ef141e091, type: 3}
 --- !u!1101 &-7768095697659648787
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
