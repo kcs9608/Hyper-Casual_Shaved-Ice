@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using ItemInterface;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,10 @@ public class Operator : Items
     [SerializeField] private AudioSource fireSfx;
     [SerializeField] private float _minSize = 1f;
     [SerializeField] private float _maxSize = 4f;
-    public enum OperatorType
+
+    public TextMesh _textMesh;
+
+    enum OperatorType
     {
         [InspectorName("Add")] Add,
         [InspectorName("Subtract")] Subtract,
@@ -21,12 +25,31 @@ public class Operator : Items
 
     [SerializeField]
     OperatorType operatorType;
-    public OperatorType GetOperatorType()
-    {
-        return operatorType;
-    }
+
     [SerializeField]
     private int _weight;
+
+    private void Start()
+    {
+        switch (operatorType)
+        {
+            case OperatorType.Add:
+                _textMesh.text = $"+ {_weight.ToString()}";
+                break;
+            case OperatorType.Subtract:
+                _textMesh.text = $"- {_weight.ToString()}";
+                break;
+            case OperatorType.Multiply:
+                _textMesh.text = $"x {_weight.ToString()}";
+                break;
+            case OperatorType.Divide:
+                _textMesh.text = $"÷ {_weight.ToString()}";
+                break;
+            default:
+                Debug.Log("잘못된 OperatorType 입력이 있습니다.");
+                break;
+        }
+    }
 
     public override void EffectToPlayer()
     {
@@ -40,21 +63,25 @@ public class Operator : Items
                 iceSfx.Play();
                 scale = (100 + _weight) / 100f;
                 currentServings += _weight;
+                
                 break;
             case OperatorType.Subtract:
                 fireSfx.Play();
                 scale = (100 - _weight) / 100f;
                 currentServings -= _weight;
+                
                 break;
             case OperatorType.Multiply:
                 iceSfx.Play();
                 scale = (100 + (_weight * 10)) / 100f;
                 currentServings *= _weight;
+                
                 break;
             case OperatorType.Divide:
                 fireSfx.Play();
                 scale = (100 - (_weight * 10)) / 100f;
                 currentServings /= _weight;
+                
                 break;
             default:
                 Debug.Log("잘못된 OperatorType 입력이 있습니다.");
