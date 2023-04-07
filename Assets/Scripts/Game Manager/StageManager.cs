@@ -23,12 +23,10 @@ public class StageManager : MonoBehaviour
     {
         if(syrup._syrupType == _goalSyrupType)
         {
-            Debug.Log("시럽 만족");
             _isSatisfied[0] = true;
         }
         else
         {
-            Debug.Log("시럽 불만족");
             _isSatisfied[0] = false;
         }
     }
@@ -36,12 +34,10 @@ public class StageManager : MonoBehaviour
     {
         if (topping._toppingType == _goalToppingType)
         {
-            Debug.Log("토핑 만족");
             _isSatisfied[1] = true;
         }
         else
         {
-            Debug.Log("토핑 불만족");
             _isSatisfied[1] = false;
         }
     }
@@ -49,12 +45,10 @@ public class StageManager : MonoBehaviour
     {
         if (size <= _goalMaxSize && size >= _goalMinSize)
         {
-            Debug.Log("사이즈 만족");
             _isSatisfied[2] = true;
         }
         else
         {
-            Debug.Log("사이즈 불만족");
             _isSatisfied[2] = false;
         }
     }

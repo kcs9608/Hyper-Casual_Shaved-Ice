@@ -36,7 +36,6 @@ public class PlayerStatus : MonoBehaviour
     {
         if (serving <= 0)
         {
-            Debug.Log("³ìÀ½");
             GameIsOver();
         }
         _currentServings = serving;

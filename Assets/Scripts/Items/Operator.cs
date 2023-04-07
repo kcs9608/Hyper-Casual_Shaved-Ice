@@ -57,19 +57,11 @@ public class Operator : Items
                 currentServings /= _weight;
                 break;
             default:
-                Debug.Log("잘못된 OperatorType 입력이 있습니다.");
                 break;
-        }
-
-        if (currentServings <= 0)
-        {
-            Debug.Log("녹음");
-            //SceneManager.LoadScene(3);
         }
 
         _playerStatus.ChangeSize(currentServings);
         _conditions.CheckSize(currentServings);
-        Debug.Log($"{currentServings}");
 
         _playerTransform.localScale *= scale;
 
