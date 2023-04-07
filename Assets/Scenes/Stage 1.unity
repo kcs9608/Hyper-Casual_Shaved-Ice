@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.09210101, g: 0.07280117, b: 0.09765284, a: 1}
+  m_IndirectSpecularColor: {r: 0.092100345, g: 0.07280044, b: 0.097651824, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -309,19 +309,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2568699036915978131, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699036915978131, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699036915978131, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699036915978131, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699036915978131, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_SizeDelta.x
@@ -797,19 +797,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2568699038221394778, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699038221394778, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699038221394778, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699038221394778, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2568699038221394778, guid: f9ad5b4cae80ddd4084ec36b50a2b850, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2545,6 +2545,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4049009063232372615, guid: 995f5938f78375041a897987c3169763, type: 3}
+      propertyPath: m_Text
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049009063232372617, guid: 995f5938f78375041a897987c3169763, type: 3}
+      propertyPath: m_Name
+      value: Continue Text
+      objectReference: {fileID: 0}
     - target: {fileID: 4049009063240484477, guid: 995f5938f78375041a897987c3169763, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2556,6 +2564,10 @@ PrefabInstance:
     - target: {fileID: 4049009063240484477, guid: 995f5938f78375041a897987c3169763, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SceneChange, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049009063240484479, guid: 995f5938f78375041a897987c3169763, type: 3}
+      propertyPath: m_Name
+      value: Continue Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 995f5938f78375041a897987c3169763, type: 3}
@@ -2573,6 +2585,10 @@ PrefabInstance:
     - target: {fileID: 4449071544789270691, guid: d8ea1c18de49bee4dbd5f49f243b4ac1, type: 3}
       propertyPath: m_Name
       value: GameOverUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449071544789270691, guid: d8ea1c18de49bee4dbd5f49f243b4ac1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4449071544789270748, guid: d8ea1c18de49bee4dbd5f49f243b4ac1, type: 3}
       propertyPath: m_Pivot.x
