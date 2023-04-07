@@ -7,11 +7,11 @@ public class InstantiateObject : StateMachineBehaviour
     [SerializeField] private GameObject[] _shavedIce;
     private Vector3 _spawnPoint;
     private int _objectIndex;
-
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         GameObject player = animator.GetComponent<Goal>()._player;
-        _objectIndex = animator.GetComponent<Goal>()._starNum - 1;
+        int _stageWeight = (GameManager.Instance._stageID + 1) % 5;
+        _objectIndex = (animator.GetComponent<Goal>()._starNum * _stageWeight) - 1;
         _spawnPoint = player.transform.position;
         player.SetActive(false);
     }

@@ -93,8 +93,8 @@ AnimatorState:
   - {fileID: -7264392325698706317}
   m_StateMachineBehaviours:
   - {fileID: -1764801903516701200}
-  - {fileID: -8862414663334494814}
   - {fileID: 7269924142847539268}
+  - {fileID: 1388260907551730633}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -345,6 +345,34 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 60, y: 590, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 195388761836406848}
+--- !u!114 &1388260907551730633
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be042f9f9395b1a419e40caf8301f430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shavedIce:
+  - {fileID: 6988940523036507442, guid: 6b8e9902434630a4ea9fb88377a6ab8e, type: 3}
+  - {fileID: 6039484789625365508, guid: 76e0bb08744812d48bd824e0ab59b7e0, type: 3}
+  - {fileID: 3892597994085725061, guid: a02406d1f5205d8419c61a8bb6d2f3c9, type: 3}
+  - {fileID: 5879085324804677604, guid: 3f42384791f6c864c878a1c573d89f88, type: 3}
+  - {fileID: 6319218530060644412, guid: 52d8207930f43ec45a87aecc8ef83bf2, type: 3}
+  - {fileID: 6817429293190994100, guid: 8f7ca5a4a6751c34e94d74c957de971b, type: 3}
+  - {fileID: 4796072133433143906, guid: dab57290ea2d4f042a3029328dffcb0a, type: 3}
+  - {fileID: 2817999266932942746, guid: 7e60a3e856f542744aa0ca8143d8a3cc, type: 3}
+  - {fileID: 8816557758533026984, guid: ec70d6625b764d4468b3993fd131984a, type: 3}
+  - {fileID: 5879085324804677604, guid: 55711bbb4c824234394d6394d949984b, type: 3}
+  - {fileID: 8688432289139226582, guid: 6964f40ac8188f546bcb71f717f017e7, type: 3}
+  - {fileID: 7887410097737441090, guid: 11405d3f25a36f144b46985d11a1fe2d, type: 3}
+  - {fileID: 3892597994085725061, guid: a02406d1f5205d8419c61a8bb6d2f3c9, type: 3}
+  - {fileID: 3892597994085725061, guid: a02406d1f5205d8419c61a8bb6d2f3c9, type: 3}
+  - {fileID: 3892597994085725061, guid: a02406d1f5205d8419c61a8bb6d2f3c9, type: 3}
 --- !u!1102 &2530165593590201363
 AnimatorState:
   serializedVersion: 6

@@ -11,7 +11,7 @@ public class Operator : Items
     [SerializeField] private AudioSource iceSfx;
     [SerializeField] private AudioSource fireSfx;
     [SerializeField] private float _minSize = 1f;
-    [SerializeField] private float _maxSize = 4f;
+    [SerializeField] private float _maxSize = 3f;
 
     public TextMesh _textMesh;
 
