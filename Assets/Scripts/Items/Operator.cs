@@ -45,9 +45,6 @@ public class Operator : Items
             case OperatorType.Divide:
                 _textMesh.text = $"÷ {_weight.ToString()}";
                 break;
-            default:
-                Debug.Log("잘못된 OperatorType 입력이 있습니다.");
-                break;
         }
     }
 
