@@ -13,9 +13,9 @@ class Goal : Items
     }
     public int _starNum { get; private set; }
     public event Action _isPlayerOnGoal;
-    [SerializeField] private Sprite clearStar; // 바꿀 이미지 색깔 있는 별
+    [SerializeField] private Sprite clearStar;
     [SerializeField] private GameObject[] stars;
-    private Image[] currentStar; // 현재 이미지 색깔 없는 별
+    private Image[] currentStar;
 
     private void Start()
     {
@@ -49,8 +49,6 @@ class Goal : Items
             Debug.Log("★");
         }
         GameManager.Instance.Reward(100, _starNum);
-        Debug.Log($"현재 골드 : {GameManager.Instance.Gold}");
-        Debug.Log($"{gameObject.name}");
         PlayAnimation();
     }
     public void ChangeImage(int index)
